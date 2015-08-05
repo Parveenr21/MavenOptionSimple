@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.RawatJi</groupId>
+	<artifactId>MavenOptions</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>MavenOptions</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<suiteClass>**/${jfile}.java</suiteClass>
+	</properties>
+
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18.1</version>
+
+				<configuration>
+
+					<suiteXmlFiles>
+						<suiteXmlFile>${tfile}</suiteXmlFile>
+						<!-- <suiteXmlFile>TestNG_another.xml</suiteXmlFile> -->
+					</suiteXmlFiles>
+
+					<systemPropertyVariables>
+						<browser>chrome</browser>
+					</systemPropertyVariables>
+
+<!-- The below include to include the SUITE class of junit we could have also had harcoded junit suite file name here -->
+					<includes>
+						<include>${suiteClass}</include>
+					</includes>
+
+
+
+					<!-- <In case the test source and classes are not in the default folders> -->
+
+					<!-- <testSourceDirectory>${basedir}/src/main/java/</testSourceDirectory> -->
+					<!-- <testClassesDirectory>${project.build.directory}/classes/</testClassesDirectory> -->
+
+				</configuration>
+				
+			</plugin>
+
+
+
+		</plugins>
+
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.6</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+</project>
