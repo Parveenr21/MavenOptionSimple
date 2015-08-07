@@ -26,10 +26,10 @@
 
 				<configuration>
 
-					<suiteXmlFiles>
+				<!-- 	<suiteXmlFiles>
 						<suiteXmlFile>${tfile}</suiteXmlFile>
-						<!-- <suiteXmlFile>TestNG_another.xml</suiteXmlFile> -->
-					</suiteXmlFiles>
+						<suiteXmlFile>TestNG_another.xml</suiteXmlFile>
+					</suiteXmlFiles> -->
 
 					<systemPropertyVariables>
 						<browser>chrome</browser>
