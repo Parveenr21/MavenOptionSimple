@@ -12,7 +12,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
  
 
-public class methodrun_Junit{
+public class methodrun_Junit_d1{
 	
 	
 	@Test

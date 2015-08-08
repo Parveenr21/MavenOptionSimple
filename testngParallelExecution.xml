@@ -1,0 +1,38 @@
+<suite name="TestNG - Suite" verbose="0" allow-return-values="true"	parallel="tests" thread-count="5">
+
+	<parameter name="param1" value="Parveen" />
+
+	<!-- check by changing parallel="classes"/methods/tests -->
+	<test name="Test1" preserve-order="true">
+		<parameter name="browser" value="ff1" />
+		<classes>
+			<class name="pack_testNG.Methodrun_testNG" />
+			 <class name="pack_testNG.Methodrun_testNG_d1" />
+			</classes>
+	</test>
+
+
+
+
+	<test name="Test2" preserve-order="true">
+		<parameter name="browser" value="ff2" />
+		<classes>
+			<class name="pack_testNG.methodrun_Junit" />
+			<class name="pack_testNG.methodrun_Junit_d1" />
+			<class name="pack_testNG.methodrun_Junit_d2" />
+		</classes>
+	</test>
+
+
+
+
+	<test name="Test3" preserve-order="true">
+		<parameter name="browser" value="ff3" />
+		<classes>
+			<class name="pack_testNG.Methodrun_testNG" />
+			<class name="pack_testNG.Methodrun_testNG_d2" /> 
+			
+		</classes>
+	</test>
+
+</suite>
