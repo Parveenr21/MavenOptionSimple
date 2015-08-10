@@ -45,6 +45,14 @@ public void met2(){
 			System.out.println("method 4 called");
 		}
 	
+	@Test(groups="Databasetest")
+	public void database1(){
+			
+			
+			System.out.println("database 1 called");
+		}
+	
+	
 	@Test
 	@Parameters("browser")
 	public void met3(String browser){
@@ -92,6 +100,12 @@ public void met2(){
 		
 	}
 	
+@Test(groups="Databasetest")
+public void Mongo1(){
+		
+		
+		System.out.println("Mongo 1 called");
+	}
 
 	
 	
