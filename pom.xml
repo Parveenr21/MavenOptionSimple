@@ -13,15 +13,15 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<suiteClass>**/${jfile}.java</suiteClass>
-<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>  <!-- Ensure you run mvn install before sonar:sonar -->
-<sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
-<!-- <sonar.surefire.reportsPath>target/surefire-reports/jacoco-ut.exec</sonar.surefire.reportsPath> -->
-<sonar.jacoco.reportPath>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.reportPath>    <!-- This is the default, put here to be explicit -->
-<sonar.jacoco.itReportPath>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.itReportPath>
-	
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>  <!-- Ensure you run mvn install before sonar:sonar -->
+		<sonar.java.codeCoveragePlugin>jacoco</sonar.java.codeCoveragePlugin>
+		<!-- <sonar.surefire.reportsPath>target/surefire-reports/jacoco-ut.exec</sonar.surefire.reportsPath> -->
+		<sonar.jacoco.reportPath>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.reportPath>    <!-- This is the default, put here to be explicit -->
+		<sonar.jacoco.itReportPath>target/coverage-reports/jacoco-ut.exec</sonar.jacoco.itReportPath>
+
 	</properties>
-	
-	
+
+
 
 
 	<build>
@@ -73,7 +73,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.4.201502262128</version>
+				<version>0.7.5.201505241946</version>
 				<executions>
 					<!-- Prepares the property pointing to the JaCoCo runtime agent which 
 						is passed as VM argument when Maven the Surefire plugin is executed. -->
@@ -84,6 +84,9 @@
 							<goal>prepare-agent</goal>
 						</goals>
 						<configuration>
+							<includes>
+								<include>/**/*.class</include>
+							</includes>
 							<destFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</destFile>
 
 							<propertyName>argLine</propertyName>
