@@ -7,13 +7,13 @@
 
 
 
-	<!-- <test name="T1" preserve-order="true">
+	<test name="T1" preserve-order="true">
 		<parameter name="browser" value="ff1" />
 		<classes>
 			<class name="pack_testNG.Methodrun_testNG" />
 
 		</classes>
-	</test> -->
+	</test>
 
 	
 </suite>
