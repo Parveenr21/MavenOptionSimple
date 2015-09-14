@@ -1,8 +1,8 @@
 
 package pack_testNG;
 
-import org.testng.annotations.Test;
 import org.junit.FixMethodOrder;
+import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 
@@ -81,7 +81,7 @@ public void met2(){
 			System.out.println("method 12 called");
 		}
 		
-		@Test(expectedExceptions=IndexOutOfBoundsException.class)
+		@Test(expected=IndexOutOfBoundsException.class)
 		public void meth13()
 		{
 			System.out.println("method 13 called");
