@@ -1,12 +1,21 @@
 
 package pack_testNG;
 
+
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+import org.testng.log4testng.Logger;
 
 
 //THIS ANNOTATION FOR TEST CLASS IS POVIDED IN JUNIT 4.11..othere wise ..random execution is there..
+//Here the order would be the way..e.g
+/*	method 1 called
+		method 10 called
+		method 11 called
+		method 12 called
+		method 2 called
+		method 4 called*/
 	
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -46,7 +55,7 @@ public void met2(){
 		}
 	@Test
 	public void met6(){
-			
+		
 			
 			System.out.println("method 6 called");
 		}	@Test

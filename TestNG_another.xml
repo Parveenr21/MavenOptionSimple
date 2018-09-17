@@ -10,14 +10,21 @@
 		<parameter name="browser" value="SPARTAN" />
 		<classes>
 			<class name="pack_testNG.Methodrun_testNG" />
+			<class name="pack_testNG.Methodrun_testNG" />
+
+	<!--SAme class name within a test tag will not be executed twice-->
+
+
 
 			<class name="pack_testNG.Methodrun_testNG">
 
-				<!-- inserting method means only this test method will be considered 
+				<!-- inserting method means only this test method will be considered
 					all other test method will be ignored -->
 
 				<!-- <methods> <include name="met5" /> </methods> -->
 			</class>
+			<class name="pack_testNG.Methodrun_testNG" />
+
 		</classes>
 	</test>
 
