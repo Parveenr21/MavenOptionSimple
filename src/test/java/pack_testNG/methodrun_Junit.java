@@ -16,80 +16,80 @@ import org.testng.log4testng.Logger;
 		method 12 called
 		method 2 called
 		method 4 called*/
-	
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
- 
+
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+
 
 public class methodrun_Junit{
-	
-	
+
+
 	@Test
 	public void met1(){
-		
-		
+
+
 		System.out.println("method 1 called");
 	}
-	
-	
+
+
 	@Test
 public void met2(){
-		
-		
+
+
 		System.out.println("method 2 called");
 	}
-	
-	
+
+
 	@Test
 	public void met4(){
-			
-			
+
+
 			System.out.println("method 4 called");
 		}
-	
+
 	@Test
 	public void met5(){
-			
-			
+
+
 			System.out.println("method 5 called");
 		}
 	@Test
 	public void met6(){
-		
-			
+
+
 			System.out.println("method 6 called");
 		}	@Test
 	public void met7(){
-			
-			
+
+
 			System.out.println("method 7 called");
 		}	@Test
 	public void met8(){
-			
-			
+
+
 			System.out.println("method 8 called");
 		}	@Test
 	public void met9(){
-			
-			
+
+
 			System.out.println("method 9 called");
 		}	@Test
 	public void met10(){
-			
-			
+
+
 			System.out.println("method 10 called");
 		}	@Test
 	public void met11(){
-			
-			
+
+
 			System.out.println("method 11 called");
 		}	@Test
 	public void met12(){
-			
-			
+
+
 			System.out.println("method 12 called");
 		}
-		
+
 		@Test(expected=IndexOutOfBoundsException.class)
 		public void meth13()
 		{
