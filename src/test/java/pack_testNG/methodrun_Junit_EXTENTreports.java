@@ -2,6 +2,10 @@
 package pack_testNG;
 
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -21,13 +25,27 @@ import org.testng.log4testng.Logger;
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 
-public class methodrun_Junit{
+public class methodrun_Junit_EXTENTreports{
 
+private	ExtentHtmlReporter htmlReporter;
 
 	@Test
 	public void met1(){
+		htmlReporter=new ExtentHtmlReporter("extentREPORThtml.html");
 
+		ExtentReports  reports=new ExtentReports();
 
+		reports.attachReporter(htmlReporter);
+		ExtentTest test1=reports.createTest("TEST 1");
+
+		test1.log(Status.INFO,"Yahoo logger using XTENT reports");
+		test1.pass("pass");
+		test1.fail("fail");
+		test1.fatal("FATAL");
+		test1.error("error");
+		test1.warning("warning");
+
+		reports.flush();
 		System.out.println("method 1 called");
 	}
 

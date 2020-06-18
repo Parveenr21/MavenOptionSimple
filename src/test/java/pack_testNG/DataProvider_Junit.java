@@ -16,20 +16,54 @@ public class DataProvider_Junit {
     @DataProvider
     public static Object[][] data() {
         return new Object[][] {
-                         { "abc", "abc" },
-                         { "cba", "abc" },
-         };
+                { "abc", "abc" },
+                { "cba", "abc" },
+        };
     }
 
 
-    
-    
+
+
+    @DataProvider
+    public static Object[][] dataNumeric() {
+        return new Object[][] {
+                { "1", "111" },
+                { "2", "222" },
+        };
+    }
+
+
     @Test
     @UseDataProvider("data")
     public void testSort( String input, String expected) {
 
-    		System.out.print("firstString    " + input);
-    			System.out.print("        Second String    " + expected);
-    				System.out.println();
+        System.out.print("firstString    " + input);
+        System.out.print("        Second String    " + expected);
+        System.out.println();
     }
+
+
+
+    @Test
+    @UseDataProvider("data")
+
+    public void foo1(String input)
+    {
+
+        System.out.println("kya haal hai aapka??");
+        System.out.println(input);
+    }
+
+
+    @Test
+    @UseDataProvider("dataNumeric")
+
+    public void foo2(String input)
+    {
+
+        System.out.println("kya haal hai aapka??");
+        System.out.println(input);
+    }
+
+
 }

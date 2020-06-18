@@ -47,10 +47,10 @@ public void met2(){
 
 	@Test
 	@Parameters("browser")
-	public void met3(String browser){
+	public void met3(String browser1){
 
 
-			System.out.println("method 3 called with browser name" + browser);
+			System.out.println("method 3 called with browser name" + browser1);
 		}
 
 

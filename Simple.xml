@@ -1,18 +1,29 @@
 <suite name="TestNG - Suite" verbose="0" allow-return-values="true"
-	parallel="classes" thread-count="5">
+	parallel="methods" thread-count="5">
 	<parameter name="param1" value="Parveen" />
 
 	<!-- check by changing parallel="classes"/methods/tests -->
 
 
 
+	<listeners>
+		<listener class-name="pack_testNG.Methodrun_testNG_d1_listeners" />
+	</listeners>
 
 	<test name="T1" preserve-order="true">
 		<parameter name="browser" value="ff1" />
+
 		<classes>
 			<class name="pack_testNG.Methodrun_testNG" />
-
+			<class name="pack_testNG.Methodrun_testNG_d1_listeners" />
 		</classes>
+		<!--WE can Add packages as well to run all classes of packages-->
+		<packages>
+			<package name="com.sample" />
+
+
+		</packages>>
+
 	</test>
 
 	

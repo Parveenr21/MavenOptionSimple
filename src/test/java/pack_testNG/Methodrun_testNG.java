@@ -16,6 +16,7 @@ public class Methodrun_testNG{
 	// d comes before m**** so databasemethod*** come beofe m... also M** method come before m***
 
 	@Test
+	
 	public void met1(){
 
 
